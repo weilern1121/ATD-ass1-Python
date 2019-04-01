@@ -1,0 +1,61 @@
+def p1_1(lst):
+    return [x * 2 + 1 for x in lst]
+
+
+def p1_2(lst):
+    return ['True' if x % 3 == 0 else 'False' for x in lst]
+
+
+def p1_3(lst):
+    return [x**2 for x in lst]
+
+
+def p1_4(lst):
+    return [x[0].upper() for x in lst]
+
+
+def p1_5(lst):
+    return [x for x in lst if 'p' in x]
+
+
+def p1_6(lst):
+    return [(x, len(x)) for x in lst]
+
+
+def p1_7(lst):
+    return [x for x in lst if x % 2 != 0]
+
+
+def p1_8(lst):
+    return [x for x in lst if lst.index(x) % 2 == 0]
+
+
+# list comprehensions implementation. Receives a list, and returns a new list containing the result.
+def p_i_lc(inputlist):
+    return
+
+
+# functional operators implementation. Receives a list, and returns a new list containing the result.
+def p_i_fo(inputlist):
+    return
+
+
+lst_num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+lst_p8 = [1, 2, 4, 5, 7]
+lst_str = ["apple", "orange", "pear"]
+print("lst_num=  ", lst_num)
+print("lst_str=  ", lst_str)
+print("p1_1=     ", p1_1(lst_num))
+print("p1_2=     ", p1_2(lst_num))
+print("p1_3=     ", p1_3(lst_num))
+print("p1_4=     ", p1_4(lst_str))
+print("p1_5=     ", p1_5(lst_str))
+print("p1_6=     ", p1_6(lst_str))
+print("p1_7=     ", p1_7(lst_num))
+print("p1_8=     ", p1_8(lst_p8))
+
+
+
+
+
+
