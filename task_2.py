@@ -36,15 +36,19 @@ def decrypt_vigenere_cipher(ciphertext, keyword):
 
 
 def try_1(plaintext):
-    return ''.join(list(reduce(lambda x, y: morse_dictionary[y] == x, plaintext)))
+    return
 
 
 def encrypt_morse_code(plaintext):
-    return '   '.join(y for x, y in zip(plaintext, morse_dictionary)if [morse_dictionary[y] == x])
+    return '   '.join(morse_dictionary[x] for x, y in zip(plaintext, morse_dictionary) if [morse_dictionary[y] == x])
 
 
 def decrypt_morse_code(ciphertext):
-    return
+    delim_text = list(ciphertext.split("             "))  # split input to words
+    split_to_letters = list(x.split('   ') for x in delim_text)  # split words to letters
+    y = reduce(lambda a, b: a + ['       '] + b, split_to_letters)  # join all the inputs to one list, 7 space as delimiter
+    return ''.join(list(morse_dictionary.keys())[list(morse_dictionary.values()).index(x)] if
+                   x in morse_dictionary.values() else ' ' for x in y)
 
 
 # 2.1 check
@@ -62,7 +66,10 @@ def decrypt_morse_code(ciphertext):
 # print("deCiphertext= ", decrypt_vigenere_cipher(encrypt_vigenere_cipher(str, str1), str1))
 
 # print(try_1(". . --- .   . --- --- --- ---   . --- .   . . .   ---"))
-# print(try_1("ABC 123"))
-# print(try_1(". ---   --- . . .   --- . --- .             . --- --- --- ---   . . --- --- ---   . . . --- ---"))
-print(try_1(". ---"))
+print(encrypt_morse_code("F1RST P0ST"))
+print(decrypt_morse_code(encrypt_morse_code("F1RST P0ST")))
+#print(try_1(". ---"))
+#print(list(morse_dictionary.keys())[5])
+#print(list(morse_dictionary.keys())[list(morse_dictionary.values()).index('. --- --- --- ---')])
+
 
