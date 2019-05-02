@@ -51,12 +51,6 @@ def p_8_lc(inputlist):
 
 # ------  functional operators implementation --------------
 
-# list comprehensions implementation. Receives a list, and returns
-# a new list containing the computations.
-def p_i_fo(inputlist):
-    return
-
-
 # functional operators implementation. Receives a list, and returns
 # a new list containing the odd-indexes only.
 def p_1_fo(inputlist):
@@ -103,31 +97,6 @@ def p_7_fo(inputlist):
 # a new list containing only the odd indexes.
 def p_8_fo(inputlist):
     return list(filter(lambda x: inputlist.index(x) % 2 == 0, inputlist))
-
-
-# lst_num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-# lst_p8 = [1, 2, 4, 5, 7]
-# lst_str = ["apple", "orange", "pear"]
-# print("lst_num=  ", lst_num)
-# print("lst_str=  ", lst_str)
-# print("--------------------------------")
-# print("p1_1=     ", p_1_lc(lst_num))
-# print("p1_1=     ", p_1_fo(lst_num))
-# print("p1_2=     ", p_2_lc(lst_num))
-# print("p1_2=     ", p_2_fo(lst_num))
-# print("p1_3=     ", p_3_lc(lst_num))
-# print("p1_3=     ", p_3_fo(lst_num))
-# print("p1_4=     ", p_4_lc(lst_str))
-# print("p1_4=     ", p_4_fo(lst_str))
-# print("p1_5=     ", p_5_lc(lst_str))
-# print("p1_5=     ", p_5_fo(lst_str))
-# print("p1_6=     ", p_6_lc(lst_str))
-# print("p1_6=     ", p_6_fo(lst_str))
-# print("p1_7=     ", p_7_lc(lst_num))
-# print("p1_7=     ", p_7_fo(lst_num))
-# print("p1_8=     ", p_8_lc(lst_p8))
-# print("p1_8=     ", p_8_fo(lst_p8))
-
 
 
 
